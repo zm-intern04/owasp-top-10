@@ -1,37 +1,97 @@
-## Welcome to GitHub Pages
+# OWASP Top 10 
 
-You can use the [editor on GitHub](https://github.com/zm-intern04/owasp-top-10/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+The OWASP Top 10 is a standard awareness document for developers and web application security. It represents a broad consensus about the most critical security risks to web applications.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Table of Content
 
-### Markdown
+- [OWASP Top 10](#owasp-top-10)
+  - [Table of Content](#table-of-content)
+  - [A1-Injection](#a1-injection)
+    - [Overview](#overview)
+    - [SQL Injection](#sql-injection)
+      - [Types of SQLI](#types-of-sqli)
+      - [Detectability](#detectability)
+      - [Tools](#tools)
+      - [Mitigation](#mitigation)
+      - [Demo (DVWA)](#demo-dvwa)
+      - [References](#references)
+  - [A2-Broken Authentication](#a2-broken-authentication)
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## A1-Injection
 
-```markdown
-Syntax highlighted code block
+### Overview
+Occur when untrusted data is sent to an interpreter as part of a command or query.
+The attacker’s hostile data can trick the interpreter into executing unintended commands or accessing data without proper authorization.
 
-# Header 1
-## Header 2
-### Header 3
+### SQL Injection
+Web applications became more complex, database driven.
+SQL injection is a particularly widespread and dangerous form of injection.
+To exploit a SQL injection flaw, the attacker must find a parameter that the web application passes through to a database.
 
-- Bulleted
-- List
+By carefully embedding malicious SQL commands into the content of the parameter, the attacker can trick the web application into forwarding a malicious query to the database.
+#### Types of SQLI
 
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+**SQL Injection Based on 1=1 is Always True**
+```SQL
+SELECT * FROM Users WHERE userID = 105 OR 1=1;
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+**SQL Injection Based on ""="" is Always True**
+```SQL
+'SELECT * FROM Users WHERE Name ="' + uName + '" AND Pass ="' + uPass + '"'
+SELECT * FROM Users WHERE Name ="John Doe" AND Pass 
+SELECT * FROM Users WHERE Name ="" or ""="" AND Pass ="" or ""=""
+```
 
-### Jekyll Themes
+**SQL Injection Based on Batched SQL Statements**
+```SQL
+SELECT * FROM Users WHERE UserId = 105; DROP TABLE Suppliers;
+```
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/zm-intern04/owasp-top-10/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
 
-### Support or Contact
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+#### Detectability
+Injection flaws are common with applications written in PHP or ASP because these tend to have older functional interfaces. They are much less common with J2EE and ASP.NET applications  
+
+Easy to identify when examining code, hard to discover via testing.
+
+The best way to detect injection flaws is by 
+- Performing a source code review 
+- Using a static code analyzer to scan code automatically
+- Using a dynamic application test tool (DAST)
+- Fuzzing tools.
+
+#### Tools
+
+**OWASP ZAP**
+OWASP ZAP (Zed Attack Proxy) is an open-source web application security scanner.
+[Official Website](https://www.zaproxy.org/)
+
+**SQLMAP**
+SQLMap is an open-source penetration testing tool that automates the process of detecting and exploiting SQL injection flaws and taking over of database servers.
+[Official Website](https://sqlmap.org/)
+
+#### Mitigation
+
+Neutralization of input data is considered the main defense approach against SQL injection attacks. This should be achieved by sanitizing input data before using it in SQL queries within application or by means of security software such as WAF or IDS/IPS system.
+
+To avoid SQL injection flaws is simple. Developers need to either:
+
+- Stop writing dynamic queries
+- Prevent user supplied input which contains malicious SQL from affecting the logic of the executed query.
+
+#### Demo (DVWA)
+[YouTube Video](https://youtu.be/NOGj_Nvv5Fg)
+
+#### References
+
+https://owasp.org/www-community/Injection_Flaws#
+https://www.youtube.com/watch?v=3ZjkIA1k8Ac
+https://www.w3schools.com/sql/sql_injection.asp
+https://grca-academy.com/a1-injection-owsap/
+https://owasp.org/www-project-top-ten/2017/A1_2017-Injection#
+https://cheatsheetseries.owasp.org/cheatsheets/Query_Parameterization_Cheat_Sheet.html
+https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html
+https://cheatsheetseries.owasp.org/cheatsheets/Query_Parameterization_Cheat_Sheet.html
+
+## A2-Broken Authentication
