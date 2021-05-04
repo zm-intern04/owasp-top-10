@@ -1,0 +1,18 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    font-family: sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+.container{
+    width: 70%;
+    max-width: 1000px;
+    margin: auto;
+}
+@import "./header";
+@import "./main";
+@import "./risks";

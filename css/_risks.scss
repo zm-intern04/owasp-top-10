@@ -1,0 +1,47 @@
+.secRisk{
+    width: 100%;
+    .listNav{
+        width: 100%;
+        ul{
+            list-style-type: none;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            li{
+                float: left;
+                a{
+                    text-decoration: none;
+                    color: #0099EA;
+                }
+            }
+        }
+    }
+    table{
+        margin-top: 3rem;
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 3rem;
+        td, th{
+            border: 1px solid #000;
+            padding: .5rem 1rem;
+            text-align: center;
+        }
+    }
+    #resList{
+        padding-left: 3rem;
+    }
+}
+
+// rating
+.one{
+    background-color: #FFFF00;
+    color: #000;
+}
+.two{
+    background-color: #FF9300;
+    color: #000;
+}
+.three{
+    background-color: #FE4200;
+    color: #fff;
+}

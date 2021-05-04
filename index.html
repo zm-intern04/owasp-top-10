@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OWASP Top 10</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <header>
+       <div class="container">
+            <img src="img/owasp.png" alt="owaspLogo" class="logo" width="200">
+            <nav>
+                <ul>
+                    <li><a href="https://owasp.org/" target="_blank">Owasp.org</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li id="massMenu">
+                        Security Risks
+                        <i class="fas fa-angle-down"></i>
+                        <ul class="massSubMenu">
+                            <section>
+                                <li><a href="owaspTopTen/a1.html"><span>A1:</span> Injection</a></li>
+                                <li><a href="owaspTopTen/a2.html"><span>A2:</span> Broken Authentication</a></li>
+                                <li><a href="owaspTopTen/a3.html"><span>A3:</span> Sensitive Data Exposure</a></li>
+                                <li><a href="owaspTopTen/a4.html"><span>A4:</span> XML External Data Entities</a></li>
+                            </section>
+                            
+                            <section>
+                                <li><a href="owaspTopTen/a5.html"><span>A5:</span> Broken Access Control</a></li>
+                                <li><a href="owaspTopTen/a6.html"><span>A6:</span> Security Misconfiguration</a></li>
+                                <li><a href="owaspTopTen/a7.html"><span>A7:</span> Cross-site Scripting</a></li>
+                            </section>
+
+                            <section>
+                                <li><a href="owaspTopTen/a8.html"><span>A8:</span> Insecure Deserialization</a></li>
+                                <li><a href="owaspTopTen/a9.html"><span>A9:</span> Componenets w/ known vulnerabilities</a></li>
+                                <li><a href="owaspTopTen/a10.html"><span>A10:</span> Insufficient Logging and Monitoring</a></li>
+                            </section>
+                        </ul>
+                        <!-- end of mass Menu -->
+                    </li>
+                </ul>
+            </nav>
+       </div>
+    </header>
+    <main>
+        <div class="container">
+            <a href="https://github.com/zm-intern04/owasp-top-10" id="githubLink">
+                <i class="fab fa-github"></i>
+                Project on GitHub
+            </a>
+            <h1>Top 10 Web Application Security Risks</h1>
+            <div id="listDisplay">
+                
+            </div>
+        </div>
+    </main>
+    <!-- custom scripts -->
+    <script src="js/home.js"></script>
+</body>
+</html>

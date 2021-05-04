@@ -1,0 +1,24 @@
+main{
+    margin-top: 3rem;
+    #githubLink{
+        text-decoration: none;
+        color: #0099EA;
+        display: block;
+        margin-bottom: 3rem;
+    }
+    h1{
+        font-size: 3rem;
+        margin-bottom: 3rem;
+    }
+
+    article{
+        margin: 1rem 0;
+        a{
+            text-decoration: none;
+            color: #0099EA; 
+        }
+        p{
+            text-align: justify;
+        }
+    }
+}

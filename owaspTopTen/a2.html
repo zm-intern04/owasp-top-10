@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OWASP Top 10</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+<body>
+    <header>
+       <div class="container">
+            <img src="../img/owasp.png" alt="owaspLogo" class="logo" width="200">
+            <nav>
+                <ul>
+                    <li><a href="https://owasp.org/" target="_blank">Owasp.org</a></li>
+                    <li><a href="../index.html">Home</a></li>
+                    <li id="massMenu">
+                        Security Risks
+                        <i class="fas fa-angle-down"></i>
+                        <ul class="massSubMenu">
+                            <section>
+                                <li><a href="a1.html"><span>A1:</span> Injection</a></li>
+                                <li><a href="a2.html"><span>A2:</span> Broken Authentication</a></li>
+                                <li><a href="a3.html"><span>A3:</span> Sensitive Data Exposure</a></li>
+                                <li><a href="a4.html"><span>A4:</span> XML External Data Entities</a></li>
+                            </section>
+                            
+                            <section>
+                                <li><a href="a5.html"><span>A5:</span> Broken Access Control</a></li>
+                                <li><a href="a6.html"><span>A6:</span> Security Misconfiguration</a></li>
+                                <li><a href="a7.html"><span>A7:</span> Cross-site Scripting</a></li>
+                            </section>
+
+                            <section>
+                                <li><a href="a8.html"><span>A8:</span> Insecure Deserialization</a></li>
+                                <li><a href="a9.html"><span>A9:</span> Componenets w/ known vulnerabilities</a></li>
+                                <li><a href="a10.html"><span>A10:</span> Insufficient Logging and Monitoring</a></li>
+                            </section>
+                        </ul>
+                        <!-- end of mass Menu -->
+                    </li>
+                </ul>
+            </nav>
+       </div>
+    </header>
+    <main>
+        <div class="container">
+            <a href="https://github.com/zm-intern04/owasp-top-10" id="githubLink">
+                <i class="fab fa-github"></i>
+                Project on GitHub
+            </a>
+            <section class="secRisk">
+                <h1>A2: Broken Authentication</h1>
+
+                <nav class="listNav">
+                    <ul>
+                        <li><a href="a1.html"><i class="fas fa-arrow-left"></i> A1</a></li>
+                        <li><a href="a3.html">A3 <i class="fas fa-arrow-right"></i></a></li>
+                    </ul>
+                </nav>
+                <table>
+                    <tr>
+                        <th colspan="4">Documentation</th>
+                    </tr>
+                    <tr>
+                        <td class="three">Exploitability: 3</td>
+                        <td class="two">Prevalence: 2</td>
+                        <td class="two">Detectability: 2</td>
+                        <td class="three">Technical: 3</td>
+                    </tr>
+                    <tr>
+                        <td><a href="">PowerPoint Presentation</a></td>
+                        <td><a href="">Word Documentation</a></td>
+                        <td><a href="">PDF Documentation</a></td>
+                        <td><a href="">Video on YouTube</a></td>
+                    </tr>
+                </table>
+
+                <h3>Resources & useful Links</h3>
+                <ul id="resList">
+                    
+                </ul>
+            </section>
+            <!-- end of container -->
+        </div>
+    </main>
+    <!-- custom scripts -->
+    <script src="../js/a2.js"></script>
+</body>
+</html>

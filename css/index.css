@@ -1,0 +1,231 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html, body {
+  font-family: sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.container {
+  width: 70%;
+  max-width: 1000px;
+  margin: auto;
+}
+
+header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  background-color: #F3F4F6;
+  padding: .6rem 0;
+}
+
+header .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header nav {
+  width: auto;
+}
+
+header nav ul {
+  list-style-type: none;
+}
+
+header nav ul li {
+  float: left;
+  padding: 0 1rem;
+}
+
+header nav ul li a {
+  display: inline-block;
+  text-decoration: none;
+  color: #262626;
+}
+
+header nav ul li a:hover {
+  color: #858585;
+}
+
+header nav #massMenu {
+  position: relative;
+  cursor: pointer;
+}
+
+header nav #massMenu:hover .massSubMenu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header nav .massSubMenu {
+  display: none;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1rem;
+  background-color: #F3F4F6;
+  position: absolute;
+  right: 0;
+  width: 700px;
+  -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+          box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  border-radius: .4rem;
+  -webkit-animation: menuShowUp .3s ease-in-out;
+          animation: menuShowUp .3s ease-in-out;
+}
+
+header nav .massSubMenu li {
+  padding: .5rem 0;
+}
+
+header nav .massSubMenu span {
+  color: #0099EA;
+  font-weight: 700;
+}
+
+header nav .massSubMenu a:hover {
+  color: #0099EA;
+}
+
+@-webkit-keyframes menuShowUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+
+@keyframes menuShowUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+
+main {
+  margin-top: 3rem;
+}
+
+main #githubLink {
+  text-decoration: none;
+  color: #0099EA;
+  display: block;
+  margin-bottom: 3rem;
+}
+
+main h1 {
+  font-size: 3rem;
+  margin-bottom: 3rem;
+}
+
+main article {
+  margin: 1rem 0;
+}
+
+main article a {
+  text-decoration: none;
+  color: #0099EA;
+}
+
+main article p {
+  text-align: justify;
+}
+
+.secRisk {
+  width: 100%;
+}
+
+.secRisk .listNav {
+  width: 100%;
+}
+
+.secRisk .listNav ul {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.secRisk .listNav ul li {
+  float: left;
+}
+
+.secRisk .listNav ul li a {
+  text-decoration: none;
+  color: #0099EA;
+}
+
+.secRisk table {
+  margin-top: 3rem;
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 3rem;
+}
+
+.secRisk table td, .secRisk table th {
+  border: 1px solid #000;
+  padding: .5rem 1rem;
+  text-align: center;
+}
+
+.secRisk #resList {
+  padding-left: 3rem;
+}
+
+.one {
+  background-color: #FFFF00;
+  color: #000;
+}
+
+.two {
+  background-color: #FF9300;
+  color: #000;
+}
+
+.three {
+  background-color: #FE4200;
+  color: #fff;
+}
+/*# sourceMappingURL=index.css.map */
